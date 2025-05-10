@@ -4,11 +4,8 @@ import axios from "axios";
 
 const { NODE_ENV } = process.env;
 
-//const URL = "http://localhost:3005";
-const URL =
-  NODE_ENV === "development"
-    ? "https://deploy-jornada-full-stack.onrender.com/api"
-    : "/api";
+//const URL = "http://localhost:3006";
+const URL = "https://deploy-jornada-full-stack.onrender.com/api";
 
 const responseArtists = await axios.get(`${URL}/artists`);
 const responseSongs = await axios.get(`${URL}/songs`);
